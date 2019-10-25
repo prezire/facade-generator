@@ -14,13 +14,13 @@ final class FacadeGenerator extends Command
    */
   protected $signature = 'make:facade 
                           {alias-name : The alias name of the facade class}
-                          {target : The fully qualified namespace of the service class to create a facade from. For example: \\\App\\\Services\\\SomeServices\\\SpecificService}';
+                          {target : The fully qualified namespace of the service class to create a facade from. For example: \\\App\\\Services\\\Foo}';
 
   /**
    * The console command description.
    * @var string
    */
-  protected $description = 'Create a new facade class.';
+  protected $description = 'Create a new Service Provider and a Facade class.';
   
   private function providersPath(string $filename):string
   {
