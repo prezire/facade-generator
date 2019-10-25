@@ -4,12 +4,5 @@
     "type": "laravel",
     "license": "MIT",
     "minimum-stability": "dev",
-    "require": {},
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Prezire\\FacadeGenerator\\FacadeServiceProvider"
-            ]
-        }
-    }
+    "require": {}
 }
