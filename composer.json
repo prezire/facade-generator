@@ -8,7 +8,7 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "Prezire\\FacadeGenerator\\": "packages/FacadeGenerator/src/"
+      "Prezire\\FacadeGenerator\\": "src/"
     }
   },
   "extra": {
