@@ -1,0 +1,15 @@
+{
+    "name": "prezire/facade-generator",
+    "description": "Generates Facades based on service class files.",
+    "type": "laravel",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Prezire\\FacadeGenerator\\FacadeServiceProvider"
+            ]
+        }
+    }
+}
