@@ -1,13 +1,23 @@
 {
-    "name": "prezire/facade-generator",
-    "description": "Generates Facades based on service class files.",
-    "type": "laravel",
-    "license": "MIT",
-    "minimum-stability": "dev",
-    "require": {},
-    "autoload": {
-        "psr-4": {
-            "Prezire\\FacadeGenerator\\": "packages/FacadeGenerator/src/"
-        }
+  "name": "prezire/facade-generator",
+  "description": "Generates Facades based on service class files.",
+  "keywords": ["laravel", "facade", "artisan", "command", "generator", "service"],
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Prezire\\FacadeGenerator\\": "packages/FacadeGenerator/src/"
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Prezire\\FacadeGenerator\\FacadeServiceProvider"
+      ],
+      "aliases": {
+      }
+    }
+  }
 }
