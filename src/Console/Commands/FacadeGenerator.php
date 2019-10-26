@@ -57,7 +57,7 @@ final class FacadeGenerator extends Command
   private function createProvider()
   {
     if(!$this->svcExists()) 
-      return $this->info('The service file does not exist.');
+      return $this->error('The service file does not exist. Create it first.');
 
     $b = true;
     if(file_exists($this->providerFullPath()))
@@ -123,13 +123,13 @@ final class FacadeGenerator extends Command
   private function createPopulatedFile
   (
     string $path, 
-    string $bladeFile, 
+    string $stub, 
     array $params
   )
   {
     $contents = view
     (
-      "facade-generator::{$bladeFile}", 
+      "facade-generator::{$stub}", 
       $params
     )->render();
     file_put_contents($path, '<?php ' . $contents);

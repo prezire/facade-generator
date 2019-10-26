@@ -1,6 +1,6 @@
 {
   "name": "prezire/facade-generator",
-  "description": "Generates Facades based on service class files.",
+  "description": "An Artisan command that generates a Service Provider and Facade based on your existing custom Service class file.",
   "keywords": ["laravel", "facade", "artisan", "command", "generator", "service"],
   "type": "library",
   "license": "MIT",
