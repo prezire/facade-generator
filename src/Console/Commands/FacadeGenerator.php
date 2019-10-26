@@ -13,8 +13,8 @@ final class FacadeGenerator extends Command
    * @var string
    */
   protected $signature = 'make:facade 
-                          {alias-name : The alias name of the facade class}
-                          {target : The fully qualified namespace of the service class to create a facade from. For example: \\\App\\\Services\\\Foo}';
+                          {alias-name : The alias name of the facade class.}
+                          {target : The fully qualified namespace of the service class to create a facade from. For example: \\\App\\\Services\\\Foo.}';
 
   /**
    * The console command description.
@@ -86,11 +86,12 @@ final class FacadeGenerator extends Command
     $classBaseName = $this->classBaseName();
     $aliasName = $this->aliasName;
     $filename = $facadesDir . '/' . $classBaseName . '.php';
+    $fqnSvc = $this->target;
     $this->createPopulatedFile
     (
       $filename, 
       'facade', 
-      compact('kebabedAliasName', 'classBaseName')
+      compact('kebabedAliasName', 'classBaseName', 'fqnSvc')
     );
     return 'App\\Facades\\' . $classBaseName . '::class';
   }
